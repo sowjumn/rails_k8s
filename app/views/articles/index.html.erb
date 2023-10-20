@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="<%= asset_path('wedding.jpg') %>" alt="Description of the image">
+            <h1>Wedding Planner</h1>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section id="about" class="container">
+        <h2>About Us</h2>
+        <p>I am a day of wedding planner that can help & coordinate you give a stressless wedding day</p>
+    </section>
+    <section id="services" class="container">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Wedding Planning</li>
+            <li>Venue Selection</li>
+            <li>Decoration</li>
+            <li>Catering</li>
+        </ul>
+    </section>
+    <section id="portfolio" class="container">
+        <h2>Portfolio</h2>
+        <div class="gallery">
+            <img src="<%= asset_path('wedding.jpg') %>" alt="Description of the image">
+            <img src="<%= asset_path('wedding.jpg') %>" alt="Description of the image">
+            <img src="<%= asset_path('wedding.jpg') %>" alt="Description of the image">
+        </div>
+    </section>
+    <section id="contact" class="container">
+        <h2>Contact Us</h2>
+        <p>Email: info@weddingplanner.com</p>
+        <p>Phone: +1 (123) 456-7890</p>
+    </section>
+    <footer>
+        &copy; 2023 Wedding Planner
+    </footer>
+</body>
+</html>
