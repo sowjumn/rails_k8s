@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wedding-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: wedding-app
+  template:
+    metadata:
+      labels:
+        app: wedding-app
+    spec:
+      containers:
+        - name: wedding-app-image
+          image: wedding-image:tag
+          ports:
+            - containerPort: 3000
+          env:
+            - name: POSTGRES_HOST
+              value: postgres # Use the PostgreSQL service name
+            - name: POSTGRES_PORT
+              value: "5432" # PostgreSQL default port
+            - name: POSTGRES_DB
+              value: wedding_postgres
+            - name: POSTGRES_USER
+              value: postgres
+            - name: POSTGRES_PASSWORD
+              value: password
