@@ -14,16 +14,16 @@ spec:
     spec:
       containers:
         - name: wedding-app-image
-          image: wedding-image:tag
+          image: mountainpinelake/wedding-app:latest
           ports:
             - containerPort: 3000
           env:
             - name: POSTGRES_HOST
-              value: postgres # Use the PostgreSQL service name
+              value: postgres-service # Use the PostgreSQL service name
             - name: POSTGRES_PORT
               value: "5432" # PostgreSQL default port
             - name: POSTGRES_DB
-              value: wedding_postgres
+              value: "wedding_postgres_db"
             - name: POSTGRES_USER
               value: postgres
             - name: POSTGRES_PASSWORD

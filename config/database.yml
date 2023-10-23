@@ -22,11 +22,11 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: postgres
   password: password
-  host: wedding_postgres
+  host: postgres-service
 
 development:
   <<: *default
-  database: wedding_planner_development
+  database: wedding_postgres_db
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
