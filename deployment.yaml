@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: wedding-app-image
-          image: mountainpinelake/wedding-app:latest
+          image: mountainpinelake/wedding-app:v2.0
           ports:
             - containerPort: 3000
           env:
